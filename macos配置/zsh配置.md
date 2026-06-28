@@ -15,8 +15,7 @@
 ##### .zshrc
 ```
 # alias python=python3
-
-# ===== 通用（两个终端都会有） =====
+# caffeinate -d 防止黑屏 -i 防后台任务中断 -t 秒数 
 
 # 自动建议
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -29,16 +28,9 @@ greet_user() {
 }
 [[ -o interactive ]] && greet_user
 
-# ===== WezTerm 专属（starship）=====
-if [[ "$TERM_PROGRAM" == "WezTerm" ]]; then
-    eval "$(starship init zsh)"
-else
-# ===== Terminal 专属=====
-    source ~/.config/jovial.zsh-theme
-fi
+source ~/.config/jovial.zsh-theme
 
-# ===== conda（全局）=====
-# ===== conda（懒加载）=====
+# ===== conda（全局懒加载）=====
 conda() {
     unset -f conda
     source /opt/anaconda3/etc/profile.d/conda.sh
