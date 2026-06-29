@@ -10,6 +10,7 @@
 
 **.zshrc配置文件中，已经进行了区分，打开wezterm时启用starship美化，而打开terminal时启用zsh-jovial美化**
 **conda 懒启动**
+**如果安装的是miniconda，记得把anaconda改成miniconda**
 
 
 ##### .zshrc
